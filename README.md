@@ -21,4 +21,4 @@ Below this you can find some commands to execute inside the project to run some 
 
 ### Credits ###
 
- * Carlos Román <croman@vsys.com>
+ * Ricardo Román <ricardo.roman.ag@gmail.com>
