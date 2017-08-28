@@ -3,7 +3,7 @@
 
 module.exports = function(config) {
     config.set({
-        basePath: '',
+        basePath: '.',
         frameworks: ['jasmine', '@angular/cli'],
         plugins: [
             require('karma-jasmine'),
@@ -29,7 +29,7 @@ module.exports = function(config) {
             fixWebpackSourcePaths: true
         },
         angularCli: {
-            environment: 'dev'
+            environment: 'dev',
         },
         reporters: config.angularCli && config.angularCli.codeCoverage ? ['progress', 'coverage-istanbul'] : ['progress', 'kjhtml'],
         port: 9876,
@@ -37,6 +37,9 @@ module.exports = function(config) {
         logLevel: config.LOG_INFO,
         autoWatch: true,
         browsers: ['Chrome'],
-        singleRun: false
+        singleRun: false,
+        proxies: {
+            '/api': 'http://localhost:8080/api' //This is our proxy for HTTP request from Angular
+        }
     });
 };

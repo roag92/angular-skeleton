@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 
 let app = express();
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8080;
 const ENV = app.get('env');
 
 app.use(helmet());
@@ -20,8 +20,14 @@ app.use(express.static(path.join(__dirname, '../client/dist')));
 
 app.disable('x-powered-by');
 
-//
-
+// My recommendation is add a prefix before to call a route
+// to prevent problems with Karma:
+// For example:
+// app.get('/api/test', (req, res) => {
+//     res.json({
+//         'result': 'My json result'
+//     });
+// });
 
 app.get('*', (req, res) => { // Main page
     //Default get request (Angular or React Application)
