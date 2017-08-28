@@ -1,6 +1,6 @@
 import { browser, by, element } from 'protractor';
 
-export class HtmlToPdfPage {
+export class App {
   navigateTo() {
     return browser.get('/');
   }

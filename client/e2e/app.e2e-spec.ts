@@ -1,10 +1,10 @@
-import { HtmlToPdfPage } from './app.po';
+import { App } from './app.po';
 
-describe('html-to-pdf App', () => {
-  let page: HtmlToPdfPage;
+describe('App', () => {
+  let page: App;
 
   beforeEach(() => {
-    page = new HtmlToPdfPage();
+    page = new App();
   });
 
   it('should display message saying app works', () => {

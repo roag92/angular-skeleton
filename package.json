@@ -7,7 +7,9 @@
         "serve": "cross-env NODE_ENV=production node ./server/index.js",
         "serve:dev": "nodemon ./server/index.js",
         "build": "ng build --prod --aot --verbose",
-        "build:dev": "ng build -w"
+        "build:dev": "ng build -w",
+        "build:live": "ng serve --proxy-config proxy.conf.json",
+        "test": "ng test"
     },
     "private": true,
     "dependencies": {
