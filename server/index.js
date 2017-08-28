@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 
 let app = express();
 
-const PORT = process.env.PORT || 4200;
+const PORT = process.env.PORT || 8000;
 const ENV = app.get('env');
 
 app.use(helmet());
@@ -19,6 +19,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
 app.disable('x-powered-by');
+
+//
+
 
 app.get('*', (req, res) => { // Main page
     //Default get request (Angular or React Application)
