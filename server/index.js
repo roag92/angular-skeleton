@@ -20,7 +20,7 @@ app.use(express.static(path.join(__dirname, '../client/dist')));
 
 app.disable('x-powered-by');
 
-// My recommendation is add a prefix before to call a route
+// My recommendation is add a prefix before to call a routenpm
 // to prevent problems with Karma:
 // For example:
 // app.get('/api/test', (req, res) => {
